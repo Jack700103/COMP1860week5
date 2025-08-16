@@ -2,7 +2,10 @@ CHIP A5Q2201860766 {
     IN N, L, K;
     OUT H;
 
+    WIRE not_N, and1_out, or_out;
+    
     PARTS:
+
         Not(in=N, out=not_N);
         And(a=not_N, b=K, out=and1_out);
         Or(a=and1_out, b=L, out=or_out);
