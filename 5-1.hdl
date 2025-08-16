@@ -1,6 +1,6 @@
-CHIP A5Q2<201860766> {
-    IN <N>, <L>, <K>;    
-    OUT <H>;         
+CHIP A5Q2201860766 {
+    IN N, L, K;    
+    OUT H;         
 
     PARTS:
         Not(in=N, out=not_N);
