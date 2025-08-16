@@ -1,8 +1,6 @@
 CHIP A5Q2201860766 {
     IN N, L, K;
     OUT H;
-
-    WIRE not_N, and1_out, or_out;
     
     PARTS:
 
