@@ -1,10 +1,11 @@
 CHIP A5Q2201860766 {
     IN N, L, K;
-    OUT H;
-    
+    OUT H;   
+
     PARTS:
-        Not(in=N, out=not_N);
-        And(not_N, K, and1_out);
-        Or(and1_out, L, or_out); 
-        And(or_out, K, H);
+        Not(in=L, out=notL);
+        Or(a=N, b=notL, out=orOut);
+        And(a=N, b=notL, out=andOut);
+        Or(a=orOut, b=andOut, out=orFinal);
+        And(a=K, b=orFinal, out=H);
 }
