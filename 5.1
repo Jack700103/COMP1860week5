@@ -1,0 +1,17 @@
+module A5Q2201860766(
+    input wire N,  
+    input wire L,  
+    input wire K,  
+    output wire H  
+);
+
+    wire not_N;    
+    wire and1_out; 
+    wire or_out;   
+
+    not not_gate (not_N, N);       
+    and and_gate1 (and1_out, not_N, K); 
+    or or_gate (or_out, and1_out, L);   
+    and and_gate2 (H, or_out, K);  
+
+endmodule
