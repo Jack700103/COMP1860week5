@@ -1,7 +1,7 @@
 CHIP A5Q2201860766 {
-    IN N, L, K;    
-    OUT H;         
-
+    IN N, L, K;
+    OUT H;
+ 
     PARTS:
         Not(in=N, out=not_N);
         And(a=not_N, b=K, out=and1_out);
